@@ -6,5 +6,5 @@ data class PokemonModel(
     @SerializedName("height") var height: Float?,
     @SerializedName("weight") var weight: Float?,
     @SerializedName("id") var id: Int?,
-    @SerializedName("type") var type: String?
+    @SerializedName("base_experience") var base_experience: Int?
 )

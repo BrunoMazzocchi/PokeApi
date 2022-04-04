@@ -14,7 +14,7 @@
         android:layout_height="32dp"
         android:layout_marginEnd="20dp"
         android:gravity="center_vertical"
-        android:text="TextView"
+        android:text="Peso:"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
@@ -24,7 +24,7 @@
         android:layout_width="135dp"
         android:layout_height="32dp"
         android:gravity="center_vertical"
-        android:text="TextView"
+        android:text="Altura:"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/txtWeight"
         app:layout_constraintHorizontal_bias="0.512"
@@ -119,12 +119,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtType"
+        android:id="@+id/txtExperience"
         android:layout_width="135dp"
         android:layout_height="32dp"
         android:layout_marginEnd="20dp"
         android:gravity="center_vertical"
-        android:text="TextView"
+        android:text="Experiencia base:"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
@@ -134,9 +134,9 @@
         android:layout_width="135dp"
         android:layout_height="32dp"
         android:gravity="center_vertical"
-        android:text="TextView"
+        android:text="Nombre:"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/txtType"
+        app:layout_constraintEnd_toStartOf="@+id/txtExperience"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />

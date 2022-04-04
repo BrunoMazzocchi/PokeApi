@@ -41,19 +41,27 @@ class MainActivity : AppCompatActivity() {
                 val call = getRetrofit().create(ApiService::class.java).getDatosPokemon(txtFiltro)
                 if (call.isSuccessful){
                     val name: String = call.body()?.name.toString()
-                    val type: String = call.body()?.type.toString()
+                    val baseExperience: String = call.body()?.base_experience.toString()
                     val height: String = call.body()?.height.toString()
                     val weight: String = call.body()?.weight.toString()
 
                     val id: Int? = call.body()?.id?.toInt()
 
-                    binding.txtName.text = name
-                    binding.txtType.text = type
-                    binding.txtWeight.text = weight
-                    binding.txtHeight.text = height
+
+                    val firstChar: Char = name.get(0).uppercaseChar()
+                    val uName = name.replaceFirstChar { firstChar }
+
+                    binding.txtName.text = "Nombre: $uName"
+                    binding.txtExperience.text = "Experiencia base: $baseExperience"
+                    binding.txtWeight.text = "Peso: $weight"
+                    binding.txtHeight.text = "Altura: $height"
 
 
                     Picasso.get().load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png").into(binding.imgPokemon)
+                } else {
+                    val msn = Toast.makeText(this@MainActivity, "No encontrado", Toast.LENGTH_LONG)
+                    msn.setGravity(Gravity.CENTER, 0, 0)
+                    msn.show()
                 }
             } catch(ex: Exception){
             val msn = Toast.makeText(this@MainActivity, "Error de conexion", Toast.LENGTH_LONG)
